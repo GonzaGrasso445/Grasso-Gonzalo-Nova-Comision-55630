@@ -1,0 +1,23 @@
+{% extends 'superapp/base.html' %}
+{% load static %}
+
+
+{% block datos %}
+    
+Agregar Producto
+
+{% endblock datos %}
+
+
+
+{% block estructura %}
+    <h2>Busque nuestras sucursales</h2>
+    <form action="" method="post">
+        {% csrf_token %}
+        <p>Sucursal: <input type="text" name="nombre" id="nombre"></p>
+        <p>Direccion: <input type="text" name="direccion" id="direccion"></p>
+        <p>Email: <input type="email" name="email" id="email"></p>
+        <input type="submit" value="Grabar">
+
+    </form>
+{% endblock estructura %}

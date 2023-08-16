@@ -1,0 +1,41 @@
+{% extends 'superapp/base.html' %}
+{% load static %}
+
+
+{% block data %}
+    
+Nuestros Productos
+
+{% endblock data %}
+
+
+
+{% block estructura %}
+    <h1>{{producto1}}</h1>
+    <table class="table table-dark table-sm">
+        <thead>
+            <tr>
+               <th>Id</th>
+               <th>Nombre de Producto</th>
+               <th>Marca</th>
+               <th>Empaque</th>
+               <th>Precio</th>
+            </tr>
+        </thead>
+        <tbody>
+    {% for p in productos %}
+            <tr>
+               <td>{{p.id}}</td>
+               <td>{{p.nombre}}</td>
+               <td>{{p.marca}}</td>
+               <td>{{p.tipo_Empaque}}</td>
+               <td>{{p.precio}}</td>
+            </tr>
+
+        
+    {% endfor %}
+        </tbody>
+   </table>
+    
+{% endblock estructura %}
+    

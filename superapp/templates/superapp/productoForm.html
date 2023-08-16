@@ -1,0 +1,24 @@
+{% extends 'superapp/base.html' %}
+{% load static %}
+
+
+{% block datos %}
+    
+Agregar Producto
+
+{% endblock datos %}
+
+
+
+{% block estructura %}
+    <h2>Agregue un nuevo producto</h2>
+    <form action="" method="post">
+        {% csrf_token %}
+        <p>Producto: <input type="text" name="nombre" id="nombre"></p>
+        <p>Marca: <input type="text" name="marca" id="marca"></p>
+        <p>Tipo de Empaque: <input type="text" name="tipo_Empaque" id="tipo_Empaque"></p>
+        <p>Precio: <input type="number" name="precio" id="precio"></p>
+        <input type="submit" value="Grabar">
+
+    </form>
+{% endblock estructura%}

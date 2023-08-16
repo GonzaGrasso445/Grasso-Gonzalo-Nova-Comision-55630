@@ -1,0 +1,21 @@
+{% extends 'superapp/base.html' %}
+{% load static %}
+
+
+{% block datos %}
+    
+Buscar Sucursal
+
+{% endblock datos %}
+
+
+
+{% block estructura %}
+    <h2>Busque Sucursal</h2>
+    <form action="/buscar3" method="get">
+        {% csrf_token %}
+        <p>Buscar Sucursales: <input type="text" name="buscar3" id="buscar3"></p>
+        <input type="submit" value="Enviar">
+
+    </form>
+{% endblock estructura%}

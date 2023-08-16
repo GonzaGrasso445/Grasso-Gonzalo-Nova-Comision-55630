@@ -1,0 +1,41 @@
+{% extends 'superapp/base.html' %}
+{% load static %}
+
+
+{% block data %}
+    
+Nuestros Empleados
+
+{% endblock data %}
+
+
+
+{% block estructura %}
+    <h1> {{empleados1}}</h1>
+
+    <h4>Cantidad de Empleados {{empleados|length }}</h4>
+    <table class="table table-dark table-sm">
+        <thead>
+            <tr>
+               <th>Id</th>
+               <th>Nombre</th>
+               <th>Apellido</th>
+               <th>Cargo</th>
+            </tr>
+        </thead>
+        <tbody>
+    {% for e in empleados %}
+            <tr>
+               <td>{{e.id}}</td>
+               <td>{{e.nombre}}</td>
+               <td>{{e.apellido}}</td>
+               <td>{{e.cargo}}</td>
+            </tr>
+
+        
+    {% endfor %}
+        </tbody>
+   </table>
+
+{% endblock estructura %}
+    
