@@ -10,12 +10,6 @@ urlpatterns = [
     path('ofertas/',ofertas , name ="ofertas"),
 
 
-
-    path('producto_form/',productoForm , name ="producto_form"),
-    path('empleado_form/',empleadoForm , name ="empleado_form"),
-    path('sucursal_form/',sucursalForm , name ="sucursal_form"),
-    path('oferta_form/',ofertaForm , name ="oferta_form"),
-
     path('productoform_adicional/',productoForm_adicional , name ="productoform_adicional"),
     path('empleadoform_adicional/',empleadoForm_adicional , name ="empleadoform_adicional"),
     path('sucursalform_adicional/',sucursalForm_adicional , name ="sucursalform_adicional"),

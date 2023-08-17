@@ -29,14 +29,6 @@ def ofertas (request):
     return render (request, "superapp/ofertas.html",contexto4)
 
 
-def productoForm (request):
-    if request.method == "POST":
-        prod = Productos(nombre = request.POST['nombre'],marca=request.POST['marca'],tipo_Empaque=request.POST['tipo_Empaque']
-                         ,precio=request.POST['precio'])
-
-        prod.save()
-        return HttpResponse ("Sus datos fueron grabados")
-    return render(request,"superapp/productoForm.html")
 
 def productoForm_adicional(request):
     if request.method == "POST":
@@ -71,13 +63,6 @@ def buscar(request):
 
 
 
-def empleadoForm (request):
-    if request.method == "POST":
-        emple = Empleados(nombre = request.POST['nombre'],apellido=request.POST['apellido'],cargo=request.POST['cargo'])
-
-        emple.save()
-        return HttpResponse ("Sus datos fueron grabados")
-    return render(request,"superapp/empleadoForm.html")
 
 
 def empleadoForm_adicional(request):
@@ -112,16 +97,6 @@ def buscar1(request):
     
     return HttpResponse("No se ingresaron datos")
 
-def sucursalForm (request):
-    if request.method == "POST":
-        sucur = Sucursales(nombre = request.POST['nombre'],direccion=request.POST['direccion'],email=request.POST['email'])
-
-        sucur.save()
-        return HttpResponse ("Sus datos fueron grabados")
-    return render(request,"superapp/sucursalForm.html")
-
-
-
 def sucursalForm_adicional(request):
     if request.method == "POST":
        miFormulario2 = SucursalesForms(request.POST)
@@ -151,16 +126,6 @@ def buscar3(request):
         return render (request, "superapp/sucursales.html",contexto3)
     
     return HttpResponse("No se ingresaron datos")
-
-
-def ofertaForm (request):
-    if request.method == "POST":
-        ofert = Ofertas(nombre = request.POST['nombre'],marca=request.POST['marca'],tipo_Empaque=request.POST['tipo_Empaque']
-                         ,precio=request.POST['precio'])
-
-        ofert.save()
-        return HttpResponse ("Sus datos fueron grabados")
-    return render(request,"superapp/ofertaForm.html")
 
 
 def ofertaForm_adicional(request):
