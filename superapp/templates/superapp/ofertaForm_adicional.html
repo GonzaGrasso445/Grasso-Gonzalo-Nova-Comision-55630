@@ -11,13 +11,13 @@ Agregar Oferta
 
 
 {% block estructura %}
-    <h2>Busca Ofertas</h2>
+    <h2>Agregar Oferta</h2>
     <form action="" method="post">
         {% csrf_token %}
         <table>
             {{form.as_table}}
         </table>
-        <input type="submit" value="Buscar">
+        <input type="submit" value="Agregar">
 
     </form>
 {% endblock estructura %}

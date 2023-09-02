@@ -1,0 +1,23 @@
+{% extends 'superapp/base.html' %}
+{% load static %}
+
+
+{% block datos %}
+    
+Agregar Proveedor
+
+{% endblock datos %}
+
+
+
+{% block estructura %}
+    <h2>Agregue nuevo Proveedor</h2>
+    <form action="" method="post">
+        {% csrf_token %}
+        <table>
+            {{form.as_table}}
+        </table>
+        <input type="submit" value="Agregar">
+
+    </form>
+{% endblock estructura%}

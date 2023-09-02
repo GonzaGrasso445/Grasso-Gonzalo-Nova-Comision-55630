@@ -1,0 +1,20 @@
+{% extends 'superapp/base.html' %}
+{% load static %}
+
+
+{% block datos %} Login 
+        Login
+{% endblock datos %}
+    
+
+{% block estructura %}
+    <h2>Login</h2>
+    <form action="" method="post">
+        {% csrf_token %}
+        <table>
+            {{form.as_table}}
+        </table>
+        <input type="submit" value="Ingresar">
+
+    </form>
+{% endblock estructura%}

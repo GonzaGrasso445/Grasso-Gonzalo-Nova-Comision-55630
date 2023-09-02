@@ -11,11 +11,11 @@ Buscar Producto
 
 
 {% block estructura %}
-    <h2>Busque un producto</h2>
+    <h2>Buscar Producto</h2>
     <form action="/buscar" method="get">
         {% csrf_token %}
         <p>Buscar Producto: <input type="text" name="buscar" id="buscar"></p>
-        <input type="submit" value="Enviar">
+        <input type="submit" value="Buscar">
 
     </form>
 {% endblock estructura%}
